@@ -38,9 +38,10 @@ def select(id):
         country = Country(result['country_name'], result['continent'], result['visited'], result['id'])
     return country
 
-# def delete_all():
-#     sql = "DELETE FROM users"
-#     run_sql(sql)
+# delete_all
+def delete_all():
+    sql = "DELETE FROM countries"
+    run_sql(sql)
 
 # def delete(id):
 #     sql = "DELETE FROM users WHERE id = %s"

@@ -43,10 +43,10 @@ def select(id):
     return city
 
 
-
-# def delete_all():
-#     sql = "DELETE FROM destinations"
-#     run_sql(sql)
+# delete_all
+def delete_all():
+    sql = "DELETE FROM cities"
+    run_sql(sql)
 
 # def delete(id):
 #     sql = "DELETE FROM destinations WHERE id = %s"
