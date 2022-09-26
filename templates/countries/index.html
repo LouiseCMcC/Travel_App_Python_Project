@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>My Countries</h1>
+
+{% for country in all_countries %}
+  <div class="country">
+    <div class="content">
+      {{country.country_name}
+      <div class="continent">
+        {{country.continent}}
+              <div class="visited">
+                {% if country.visited == True %}
+                <span> &#10004; </span>
+                {% else %}
+                <span> &#10006; </span>
+                {% endif %}
+              </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+
+{% endblock %}
+
+

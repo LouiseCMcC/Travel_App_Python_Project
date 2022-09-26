@@ -6,23 +6,27 @@ from models.country import Country
 import repositories.city_repository as city_repository
 import repositories.country_repository as country_repository
 
-
 # city_repository.delete_all()
 # country_repository.delete_all()
 
-
+country1 = Country("Egypt", "Africa", True)
+country_repository.save(country1)
+country2 = Country("Syria", "Asia", False)
+country_repository.save(country2)
+country3 = Country("France", "Europe", True)
+country_repository.save(country3)
 
 country_repository.select_all()
+
+city1 = City("Cairo", country1, True)
+city_repository.save(city1)
+city2 = City("Palmyra", country2, True)
+city_repository.save(city2)
+city3 = City("Paris", country3, True)
+city_repository.save(city3)
+
 city_repository.select_all()
 
-GO FROM HERE ***
-
-destination1 = Destination("Cairo", user1, "Egypt", "Africa", "Pyramids of Giza", False)
-city_repository.save(destination1)
-destination2 = Destination("Palmyra", user2, "Syria", "Asia", "Roman Forum", True)
-city_repository.save(destination2)
-destination3 = Destination("Paris", user3, "Europe", "France", "Catacombs", False)
-city_repository.save(destination3)
 
 pdb.set_trace()
 
