@@ -27,16 +27,20 @@ def select_all():
         destinations.append(destination)
     return destinations 
 
-# def select(id):
-#     destination = None
-#     sql = "SELECT * FROM destinations WHERE id = %s"
-#     values = [id]
-#     result = run_sql(sql, values)[0]
+# select
+def select(id):
+    destination = None
+    sql = "SELECT * FROM destinations WHERE id = %s"
+    values = [id]
+    results = run_sql(sql, values)
 
-#     if result is not None:
-#         user = user_repository.select(result['user_id'])
-#         destination = Destination(user, result['continent'], result['country'], result['city'], result['sight'], result['visited'], result['id'])
-#     return user
+    if results:
+        result = results[0]
+        user = user_repository.select(result['user_id'])
+        destination = Destination(result['city'], user, result['country'], result['continent'], result['sight'], result['visited'], result['id'])
+    return destination
+
+
 
 # def delete_all():
 #     sql = "DELETE FROM destinations"

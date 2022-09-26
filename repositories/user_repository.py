@@ -24,16 +24,17 @@ def select_all():
         users.append(user)
     return users
 
+# select
+def select(id):
+    user = None
+    sql = "SELECT * FROM users WHERE id = %s"
+    values = [id]
+    results = run_sql(sql, values)
 
-# def select(id):
-#     user = None
-#     sql = "SELECT * FROM users WHERE id = %s"
-#     values = [id]
-#     result = run_sql(sql, values)[0]
-
-#     if result is not None:
-#         user = User(result['first_name'], result['last_name'], result['id'])
-#     return user
+    if results:
+        result = results[0]
+        user = User(result['first_name'], result['last_name'], result['id'])
+    return user
 
 # def delete_all():
 #     sql = "DELETE FROM users"

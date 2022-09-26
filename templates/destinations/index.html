@@ -2,5 +2,31 @@
 {% block content %}
 
 {% for task in all_tasks %}
+  <div class="destination">
+    <div class="content">
+      {{destination.user.first_name}}
+      <div class="city">
+        {{destination.city}}
+        <div class="country">
+          {{destination.country}}
+          <div class="continent">
+            {{destination.continent}}
+            <div class="sight">
+              {{destination.sight}}
+              <div class="visited">
+                {% if destination.visited == True %}
+                <span> &#10004; </span>
+                {% else %}
+                <span> &#10006; </span>
+                {% endif %}
+              </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+
+{% endblock %}
 
 
