@@ -1,6 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 <h1>My Countries</h1>
+<body>
+  <header>
+    <nav>
+      <ul class="menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/countries/new">New Country</a></li>
+      </ul>
+    </nav>
+  </header>
 
 {% for country in countries %}
   <div class="country">

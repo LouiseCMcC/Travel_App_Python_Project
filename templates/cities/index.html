@@ -1,6 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 <h1>My Cities</h1>
+<body>
+  <header>
+    <nav>
+      <ul class="menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/cities/new">New City</a></li>
+      </ul>
+    </nav>
+  </header>
 
 {% for city in cities %}
   <div class="city">
@@ -19,5 +28,5 @@
     </div>
   </div>
 {% endfor %}
-
 {% endblock %}
+</body>
