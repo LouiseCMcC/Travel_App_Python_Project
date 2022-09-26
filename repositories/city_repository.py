@@ -9,7 +9,7 @@ import pdb
 # save
 def save(city):
     sql = "INSERT INTO cities (city_name, country_id, visited) VALUES (%s, %s, %s) RETURNING id"
-    values = [city.city_name, city.country_id, city.visited]
+    values = [city.city_name, city.country.id, city.visited]
     results = run_sql(sql, values)
     id = results[0]['id']
     city.id = id
@@ -26,7 +26,7 @@ def select_all():
         country = country_repository.select(row['country_id'])
         city = City(row['city_name'], country, row['visited'], row['id'])
         cities.append(city)
-    pdb.set_trace()
+    # pdb.set_trace()
     return cities
 
 # select
