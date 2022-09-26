@@ -1,18 +1,17 @@
-DROP TABLE IF EXISTS destinations;
-DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS cities;
+DROP TABLE IF EXISTS countries;
 
-CREATE TABLE users (
+CREATE TABLE countries (
     id SERIAL PRIMARY KEY,
-    first_name VARCHAR(255),
-    last_name VARCHAR(255)
+    country_name VARCHAR(255),
+    continent VARCHAR(255),
+    city VARCHAR(255),
+    visited BOOLEAN
 );
 
-CREATE TABLE destinations (
+CREATE TABLE cities (
     id SERIAL PRIMARY KEY,
-    continent VARCHAR(255),
-    country VARCHAR(255),
-    city VARCHAR(255),
-    sight VARCHAR(255),
-    visited BOOLEAN,
-    user_id INT NOT NULL REFERENCES users(id)
+    city_name VARCHAR(255),
+    country_id VARCHAR(255) REFERENCES countries(country_name),
+    visited BOOLEAN
 );

@@ -1,21 +1,29 @@
 from flask import Flask, render_template, request, redirect
 
-from repositories import destination_repository, user_repository
+from repositories import country_repository, city_repository
 
-from models.destination import Destination
+from models.city import City
+from models.country import Country
 
 from flask import Blueprint
 
-destinations_blueprint = Blueprint("destinations", __name__)
+travels_blueprint = Blueprint("travels", __name__)
 
 # RESTful CRUD Routes
 
 # INDEX
-# GET '/destinations'
-@destinations_blueprint.route("/destinations")
-def destinations():
-    destinations = destination_repository.select_all()
-    return render_template("destinations/index.html", all_destinations = destinations)
+# GET '/countries'
+@travels_blueprint.route("/countries")
+def countries():
+    countries = country_repository.select_all()
+    return render_template("countries/index.html", all_countries = countries)
+
+# INDEX
+# GET '/cities'
+@travels_blueprint.route("/cities")
+def cities():
+    cities = city_repository.select_all()
+    return render_template("cities/index.html", all_cities = cities)
 
 # NEW
 # GET '/tasks/new'
