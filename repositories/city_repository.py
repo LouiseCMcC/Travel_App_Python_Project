@@ -4,11 +4,12 @@ from models.country import Country
 from models.city import City
 
 import repositories.country_repository as country_repository
+import pdb
 
 # save
 def save(city):
-    sql = "INSERT INTO cities (city_name, country, visited) VALUES (%s, %s, %s) RETURNING *"
-    values = [city.city_name, city.country, city.visited]
+    sql = "INSERT INTO cities (city_name, country_id, visited) VALUES (%s, %s, %s) RETURNING id"
+    values = [city.city_name, city.country_id, city.visited]
     results = run_sql(sql, values)
     id = results[0]['id']
     city.id = id
@@ -22,9 +23,10 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        country = country_repository.select(row['country_name'])
+        country = country_repository.select(row['country_id'])
         city = City(row['city_name'], country, row['visited'], row['id'])
         cities.append(city)
+    pdb.set_trace()
     return cities
 
 # select
@@ -36,8 +38,8 @@ def select(id):
 
     if results:
         result = results[0]
-        country = country_repository.select(result['country_id'])
-        city = City(result['city_name'], country, result['visited'], result['id'])
+        country_id = country_repository.select(result['country_name'])
+        city = City(result['city_name'], country_id, result['visited'], result['id'])
     return city
 
 

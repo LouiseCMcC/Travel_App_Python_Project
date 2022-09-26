@@ -15,6 +15,7 @@ country2 = Country("Syria", "Asia", False)
 country_repository.save(country2)
 country3 = Country("France", "Europe", True)
 country_repository.save(country3)
+# pdb.set_trace()
 
 country_repository.select_all()
 

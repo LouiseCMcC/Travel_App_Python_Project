@@ -2,14 +2,16 @@ from db.run_sql import run_sql
 
 from models.country import Country
 from models.city import City
+import pdb
 
 # save
 def save(country):
+    # pdb.set_trace()
     sql = "INSERT INTO countries (country_name, continent, visited) VALUES (%s, %s, %s) RETURNING *"
     values = [country.country_name, country.continent, country.visited]
     results = run_sql(sql, values)
-    id = results[0]['id']
-    country.id = id
+    country.id = results[0]['id']
+    
     return country 
 
 # select_all

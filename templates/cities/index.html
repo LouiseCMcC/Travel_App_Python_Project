@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>My Countries</h1>
+<h1>My Cities</h1>
 
-{% for country in countries %}
-  <div class="country">
+{% for city in cities %}
+  <div class="city">
     <div class="content">
-      {{country.country_name}}
-      <div class="continent">
-        {{country.continent}}
+      {{city.city_name}}
+      <div class="country">
+        {{city.country_id}}
               <div class="visited">
-                {% if country.visited == True %}
+                {% if city.visited == True %}
                 <span> &#10004; </span>
                 {% else %}
                 <span> &#10006; </span>
@@ -21,5 +21,3 @@
 {% endfor %}
 
 {% endblock %}
-
-
