@@ -2,9 +2,15 @@
 {% block content %}
 
 <div>
-    <p>{{city.city_name}}</p>
+    <p>{{city.city_name}},</p>
     <p>{{city.country.country_name}}</p>
-    <p>Visited? {{city.visited}}</p>
+    <!-- <p>Visited? {{city.visited}}</p> -->
+    <p>Visited: {% if city.visited == True %}
+        <span> &#10004; </span>
+        {% else %}
+        <span> &#10006; </span>
+        {% endif %}
+    </p>
     <p><a href="/cities/{{city.id}}/edit">Edit</a></p>
 </div>
 
