@@ -1,13 +1,16 @@
 import pdb
 
+from models.sight import Sight
 from models.city import City
 from models.country import Country
 
+import repositories.sight_repository as sight_repository
 import repositories.city_repository as city_repository
 import repositories.country_repository as country_repository
 
 city_repository.delete_all()
 country_repository.delete_all()
+sight_repository.delete_all()
 
 country1 = Country("Egypt", "Africa", True)
 country_repository.save(country1)
@@ -42,8 +45,16 @@ city9 = City("Istanbul", country5, True)
 city_repository.save(city9)
 city10 = City("Ephesus", country5, False)
 
-
 city_repository.select_all()
+
+sight1 = Sight("Pyramids of Giza", country1, True)
+sight_repository.save(sight1)
+sight2 = Sight("Roman Forum", country2, False)
+sight_repository.save(sight2)
+sight3 = Sight("Catacombs", country3, True)
+sight_repository.save(sight3)
+
+sight_repository.select_all()
 
 
 
