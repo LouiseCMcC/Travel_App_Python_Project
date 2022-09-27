@@ -12,13 +12,13 @@ CREATE TABLE countries (
 CREATE TABLE cities (
     id SERIAL PRIMARY KEY,
     city_name VARCHAR(255),
-    country_id INT NOT NULL REFERENCES countries(id),
+    country_id INT NOT NULL REFERENCES countries(id) ON DELETE CASCADE,
     visited BOOLEAN
 );
 
 CREATE TABLE sights (
     id SERIAL PRIMARY KEY,
     sight_name VARCHAR(255),
-    city_id INT NOT NULL REFERENCES cities(id),
+    city_id INT NOT NULL REFERENCES cities(id) ON DELETE CASCADE,
     visited BOOLEAN
 );

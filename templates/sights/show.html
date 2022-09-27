@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div>
+    <p>{{sight.sight_name}},</p>
+    <p>{{sight.city.city_name}}</p>
+    <p>Visited: {% if country.visited == True %}
+        <span> &#10004; </span>
+        {% else %}
+        <span> &#10006; </span>
+        {% endif %}
+    </p>
+    <p><a href="/sights/{{sight.id}}/edit">Edit</a></p>
+</div>
+
+{% endblock %}

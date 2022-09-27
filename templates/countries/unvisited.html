@@ -21,26 +21,13 @@
       <div class="continent">
         Continent: {{country.continent}}
 
-        <!-- <div>
-          <label for="visited">Visited? </label>
-          <select id="visited" name="visited">
-              <option value="true">True</option>
-              <option value="false">False</option>
-          </select>
-      </div> -->
-
-        <div>
-          <label for="visited">Visited? </label>
-          <input type="checkbox" id="visited" name="'visited">
+        <div class="visited">
+          Visited: {% if country.visited == True %}
+          <span> &#10004; </span>
+          {% else %}
+          <span> &#10006; </span>
+          {% endif %}
         </div>
-
-              <!-- <div class="visited">
-                Visited: {% if country.visited == True %}
-                <span> &#10004; </span>
-                {% else %}
-                <span> &#10006; </span>
-                {% endif %}
-              </div> -->
 
               <div class="buttons">
               <form class="delete-form" action="/countries/{{country.id}}/delete" method="POST">

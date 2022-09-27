@@ -52,13 +52,12 @@ sights_blueprint = Blueprint("sights", __name__)
 #     city_repository.save(city)
 #     return redirect('/cities')
 
-# # SHOW
-# # GET '/tasks/<id>'
-# @cities_blueprint.route('/cities/<id>')
-# def show_city(id):
-#     city = city_repository.select(id)
-#     # country = country_repository.select(id)
-#     return render_template('cities/show.html', city = city)
+# SHOW
+# GET '/tasks/<id>'
+@sights_blueprint.route('/cities/<id>/sights')
+def show_sight(id):
+    sight = sight_repository.select(id)
+    return render_template('cities/sights/show.html', sight = sight)
 
 
 
