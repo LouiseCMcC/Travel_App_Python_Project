@@ -26,12 +26,10 @@ def select_all():
         country = country_repository.select(row['country_id'])
         city = City(row['city_name'], country, row['visited'], row['id'])
         cities.append(city)
-    # pdb.set_trace()
     return cities
 
 # select
 def select(id):
-    # pdb.set_trace()
     city = None
     sql = "SELECT * FROM cities WHERE id = %s"
     values = [id]
@@ -53,11 +51,10 @@ def delete_all():
 def delete(id):
     sql = "DELETE FROM cities WHERE id = %s"
     values = [id]
-    run_sql(sql)
+    run_sql(sql, values)
 
 # update
 def update(city):
-    # pdb.set_trace()
     sql = "UPDATE cities SET (city_name, country_id, visited) = (%s, %s, %s) WHERE id = %s"
     values = [city.city_name, city.country.id, city.visited, city.id]
     run_sql(sql, values)

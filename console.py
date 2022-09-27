@@ -26,9 +26,7 @@ city3 = City("Paris", country3, True)
 city_repository.save(city3)
 
 city_repository.select_all()
-city3.city_name = "Par"
 
-city_repository.update(city3)
 
 
 

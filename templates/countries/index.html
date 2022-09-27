@@ -24,6 +24,11 @@
                 <span> &#10006; </span>
                 {% endif %}
               </div>
+              <div class="buttons">
+              <form class="delete-form" action="/countries/{{country.id}}/delete" method="POST">
+                <button class="trash-button"></button>
+              </form>
+            </div>
       </div>
     </div>
   </div>

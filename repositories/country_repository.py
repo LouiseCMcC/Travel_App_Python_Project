@@ -47,7 +47,7 @@ def delete_all():
 def delete(id):
     sql = "DELETE FROM countries WHERE id = %s"
     values = [id]
-    run_sql(sql)
+    run_sql(sql, values)
 
 # update
 def update(country):
