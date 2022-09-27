@@ -31,6 +31,7 @@ def select_all():
 
 # select
 def select(id):
+    # pdb.set_trace()
     city = None
     sql = "SELECT * FROM cities WHERE id = %s"
     values = [id]
@@ -38,8 +39,8 @@ def select(id):
 
     if results:
         result = results[0]
-        country_id = country_repository.select(result['country_name'])
-        city = City(result['city_name'], country_id, result['visited'], result['id'])
+        country = country_repository.select(result['country_id'])
+        city = City(result['city_name'], country, result['visited'], result['id'])
     return city
 
 
@@ -48,12 +49,15 @@ def delete_all():
     sql = "DELETE FROM cities"
     run_sql(sql)
 
-# def delete(id):
-#     sql = "DELETE FROM destinations WHERE id = %s"
-#     values = [id]
-#     run_sql(sql)
+# delete
+def delete(id):
+    sql = "DELETE FROM cities WHERE id = %s"
+    values = [id]
+    run_sql(sql)
 
-# def update(task):
-#     sql = "DELETE destinations SET (user_id, continent, country, city, sight, visited) = (%s, %s, %s, %s, %s, %s) WHERE id = %s"
-#     values = [destination.user.id, destination.continent, destination.country, destination.city, destination.sight, destination.completed, destination.id]
-#     run_sql(sql, values)
+# update
+def update(city):
+    # pdb.set_trace()
+    sql = "UPDATE cities SET (city_name, country_id, visited) = (%s, %s, %s) WHERE id = %s"
+    values = [city.city_name, city.country.id, city.visited, city.id]
+    run_sql(sql, values)

@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 
-from repositories import country_repository as country_respository
+from repositories import country_repository as country_repository
 from repositories import city_repository as city_repository
 
 from models.city import City
@@ -15,26 +15,56 @@ countries_blueprint = Blueprint("countries", __name__)
 # GET '/countries'
 @countries_blueprint.route("/countries")
 def countries():
-    countries = country_respository.select_all()
+    countries = country_repository.select_all()
     return render_template("countries/index.html", countries = countries)
 
 # NEW
 # GET '/tasks/new'
+@countries_blueprint.route('/countries/new')
+def new_country():
+    countries = country_repository.select_all()
+    return render_template('countries/new.html', countries = countries)
 
 # CREATE
 # POST '/tasks'
-
-# CREATE
-# POST '/tasks'
+@countries_blueprint.route('/countries', methods=['POST'])
+def create_country():
+    country_name = request.form['country_name']
+    continent = request.form['continent']
+    visited = request.form['visited']
+    new_country = Country(country_name, continent, visited)
+    country_repository.save(new_country)
+    return redirect('/countries')
 
 # SHOW
 # GET '/tasks/<id>'
+@countries_blueprint.route('/countries/<id>')
+def show_country(id):
+    country = country_repository.select(id)
+    return render_template('countries/show.html', country = country)
 
-# EDIT
-# GET '/tasks/<id>/edit'
+# # EDIT
+# # GET '/tasks/<id>/edit'
+@countries_blueprint.route('/countries/<id>/edit')
+def edit_country(id):
+    country = country_repository.select(id)
+    countries = country_repository.select_all()
+    return render_template('countries/edit.html', country = country, countries = countries)
 
-# UPDATE methods on task_controller method on html
+# UPDATE 
 # PUT '/tasks/<id>'
+@countries_blueprint.route('/countries/<id>', methods=['POST'])
+def update_country(id):
+    country_name = request.form['country_name']
+    continent = request.form['continent']
+    visited = request.form['visited']
+    country_to_update = Country(country_name, continent, visited, id)
+    country_repository.update(country_to_update)
+    return redirect('/countries')
 
-# DELETE
-# DELETE '/tasks/<id>'
+# # DELETE
+# # DELETE '/tasks/<id>'
+# @countries_blueprint.route('/countries/<id>/delete', methods=['POST'])
+# def delete_country(id):
+#     country_repository.delete(id)
+#     return redirect('/countries')

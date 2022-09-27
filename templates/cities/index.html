@@ -5,7 +5,6 @@
   <header>
     <nav>
       <ul class="menu">
-        <li><a href="/">Home</a></li>
         <li><a href="/cities/new">New City</a></li>
       </ul>
     </nav>
@@ -14,11 +13,12 @@
 {% for city in cities %}
   <div class="city">
     <div class="content">
-      {{city.city_name}}
+      City:
+      <a href="/cities/{{city.id}}">{{city.city_name}}</a>
       <div class="country">
-          {{city.country.country_name}}
+          Country: {{city.country.country_name}}
               <div class="visited">
-                {% if city.visited == True %}
+                Visited: {% if city.visited == True %}
                 <span> &#10004; </span>
                 {% else %}
                 <span> &#10006; </span>

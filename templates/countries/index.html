@@ -5,7 +5,6 @@
   <header>
     <nav>
       <ul class="menu">
-        <li><a href="/">Home</a></li>
         <li><a href="/countries/new">New Country</a></li>
       </ul>
     </nav>
@@ -14,11 +13,12 @@
 {% for country in countries %}
   <div class="country">
     <div class="content">
-      {{country.country_name}}
+      Country: 
+      <a href="/countries/{{country.id}}">{{country.country_name}}</a>
       <div class="continent">
-        {{country.continent}}
+        Continent: {{country.continent}}
               <div class="visited">
-                {% if country.visited == True %}
+                Visited: {% if country.visited == True %}
                 <span> &#10004; </span>
                 {% else %}
                 <span> &#10006; </span>

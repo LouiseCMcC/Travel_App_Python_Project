@@ -43,13 +43,15 @@ def delete_all():
     sql = "DELETE FROM countries"
     run_sql(sql)
 
-# def delete(id):
-#     sql = "DELETE FROM users WHERE id = %s"
-#     values = [id]
-#     run_sql(sql)
+# delete
+def delete(id):
+    sql = "DELETE FROM countries WHERE id = %s"
+    values = [id]
+    run_sql(sql)
 
-# def update(user):
-#     sql = "DELETE users SET (first_name, last_name) = (%s, %s) WHERE id = %s"
-#     values = [user.first_name, user.last_name]
-#     run_sql(sql, values)
+# update
+def update(country):
+    sql = "UPDATE countries SET (country_name, continent, visited) = (%s, %s, %s) WHERE id = %s"
+    values = [country.country_name, country.continent, country.visited, country.id]
+    run_sql(sql, values)
 
