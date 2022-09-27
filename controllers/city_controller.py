@@ -11,12 +11,13 @@ cities_blueprint = Blueprint("cities", __name__)
 
 # RESTful CRUD Routes
 
-# INDEX
-# GET '/cities'
+# CITIES PAGE
 @cities_blueprint.route("/cities")
 def cities():
     return render_template("cities/index.html")
 
+# INDEX
+# GET '/cities'
 # INDEX UNVISITED CITIES
 @cities_blueprint.route("/cities/unvisited")
 def unvisited_cities():

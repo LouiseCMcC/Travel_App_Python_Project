@@ -1,19 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>My Cities</h1>
+<h1>My Visited Cities</h1>
 <body>
   <header>
     <nav>
       <ul class="menu">
-        <li><a href="/cities/new">New City</a></li>
-        <li><a href="/cities/visited">Visited Cities</a></li>
-        <li><a href="/cities/visited">Unvisited Cities</a></li>
+        <li><a href="/cities">Cities</a></li>
+        <li><a href="/cities/unvisited">Unvisited Cities</a></li>
       </ul>
     </nav>
   </header>
 
 {% for city in cities %}
-{% if city.visited == False %}
+  {% if city.visited == True %}
   <div class="city">
     <div class="content">
       City:
@@ -26,12 +25,21 @@
             <input type="checkbox" id="visited" name="'visited">
           </div>
 
+              <!-- <div class="visited">
+                Visited: {% if city.visited == True %}
+                <span> &#10004; </span>
+                {% else %}
+                <span> &#10006; </span>
+                {% endif %}
+              </div> --> -->
+
               <form class="delete-form" action="/cities/{{city.id}}/delete" method="POST">
                 <button class="trash-button"></button>
               </form>
       </div>
     </div>
   </div>
+  {% endif %}
 {% endfor %}
 {% endblock %}
 </body>
