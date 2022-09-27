@@ -1,18 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>My Countries</h1>
+<h1>My Unvisited Countries</h1>
 <body>
   <header>
     <nav>
       <ul class="menu">
-        <li><a href="/countries/new">New Country</a></li>
+        <li><a href="/countries">Countries</a></li>
         <li><a href="/countries/visited">Visited Countries</a></li>
-        <li><a href="/countries/unvisited">Unvisited Countries</a></li>
+ 
       </ul>
     </nav>
   </header>
 
-<!-- {% for country in countries %}
+{% for country in countries %}
+    {% if country.visited == False%}
   <div class="country">
     <div class="content">
       Country: 
@@ -28,10 +29,10 @@
           </select>
       </div> -->
 
-        <!-- <div>
+        <div>
           <label for="visited">Visited? </label>
           <input type="checkbox" id="visited" name="'visited">
-        </div> -->
+        </div>
 
               <!-- <div class="visited">
                 Visited: {% if country.visited == True %}
@@ -41,7 +42,7 @@
                 {% endif %}
               </div> -->
 
-              <!-- <div class="buttons">
+              <div class="buttons">
               <form class="delete-form" action="/countries/{{country.id}}/delete" method="POST">
                 <button class="trash-button"></button>
               </form>
@@ -49,8 +50,7 @@
       </div>
     </div>
   </div>
-{% endfor %} --> 
+  {% endif %}
+{% endfor %} 
 
 {% endblock %}
-
-

@@ -15,8 +15,19 @@ cities_blueprint = Blueprint("cities", __name__)
 # GET '/cities'
 @cities_blueprint.route("/cities")
 def cities():
+    return render_template("cities/index.html")
+
+# INDEX UNVISITED CITIES
+@cities_blueprint.route("/cities/unvisited")
+def unvisited_cities():
     cities = city_repository.select_all()
-    return render_template("cities/index.html", cities = cities)
+    return render_template("cities/unvisited.html", cities = cities)
+
+# INDEX VISITED CITIES
+@cities_blueprint.route("/cities/visited")
+def visited_cities():
+    cities = city_repository.select_all()
+    return render_template("cities/visited.html", cities = cities)
 
 # NEW
 # GET '/tasks/new'

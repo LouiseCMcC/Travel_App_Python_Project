@@ -11,12 +11,23 @@ countries_blueprint = Blueprint("countries", __name__)
 
 # RESTful CRUD Routes
 
-# INDEX
-# GET '/countries'
+# COUNTRIES PAGE
 @countries_blueprint.route("/countries")
 def countries():
+    return render_template("countries/index.html")
+
+# GET '/countries'
+# INDEX UNVISITED 
+@countries_blueprint.route("/countries/unvisited")
+def unvisited_countries():
     countries = country_repository.select_all()
-    return render_template("countries/index.html", countries = countries)
+    return render_template("countries/unvisited.html", countries = countries)
+
+# INDEX VISITED
+@countries_blueprint.route("/countries/visited")
+def visited_countries():
+    countries = country_repository.select_all()
+    return render_template("countries/visited.html", countries = countries)
 
 # NEW
 # GET '/tasks/new'

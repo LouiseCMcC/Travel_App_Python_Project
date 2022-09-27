@@ -12,7 +12,8 @@
     </nav>
   </header>
 
-<!-- {% for city in cities %}
+{% for city in cities %}
+{% if city.visited == True %}
   <div class="city">
     <div class="content">
       City:
@@ -25,15 +26,7 @@
             <input type="checkbox" id="visited" name="'visited">
           </div>
 
-              <!-- <div class="visited">
-                Visited: {% if city.visited == True %}
-                <span> &#10004; </span>
-                {% else %}
-                <span> &#10006; </span>
-                {% endif %}
-              </div> -->
-
-              <!-- <form class="delete-form" action="/cities/{{city.id}}/delete" method="POST">
+              <form class="delete-form" action="/cities/{{city.id}}/delete" method="POST">
                 <button class="trash-button"></button>
               </form>
       </div>
@@ -41,4 +34,4 @@
   </div>
 {% endfor %}
 {% endblock %}
-</body> --> -->
+</body>
