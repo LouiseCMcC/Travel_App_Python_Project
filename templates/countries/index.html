@@ -1,13 +1,13 @@
+<header id="countries_header">My Countries.</header>
 {% extends "base.html" %}
 {% block content %}
-<h1>My Countries</h1>
 <body>
   <header>
     <nav>
-      <ul class="menu">
-        <li><a href="/countries/new">New Country</a></li>
-        <li><a href="/countries/visited">Visited Countries</a></li>
-        <li><a href="/countries/unvisited">Unvisited Countries</a></li>
+      <ul class="country_menu">
+        <li><a id="new_country_link" href="/countries/new">New Country</a></li>
+        <li><a id ="visited_countries_link" href="/countries/visited">Visited Countries</a></li>
+        <li><a id="unvisited_countries_link" href="/countries/unvisited">Unvisited Countries</a></li>
       </ul>
     </nav>
   </header>

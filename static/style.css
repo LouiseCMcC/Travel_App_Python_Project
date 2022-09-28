@@ -1,0 +1,224 @@
+#home_link {
+    text-decoration: none;
+    font-size: 50px;
+    color: black;
+    padding: 40px;
+}
+
+#countries_link {
+    text-decoration: none;
+    font-size: 50px;
+    color: black;
+    padding: 40px;
+}
+
+#cities_link {
+    text-decoration: none;
+    font-size: 50px;
+    color: black;
+    padding: 40px;
+}
+
+#main_nav_list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-items: center; 
+}
+
+#main_nav {
+    background-color:aquamarine;
+
+}
+
+#main_title {
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: #FADADD;
+    padding: 20px;
+    height: 60px;
+    <img src="/Users/Shared/codeclan_work/python_project/python_project_code/images/colosseum.jpeg">
+}
+
+#countries_header {
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: #FADADD;
+    padding: 20px;
+    height: 60px;
+}
+
+#cities_header {
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: #FADADD;
+    padding: 20px;
+    height: 60px;
+}
+
+#main_page_text {
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+    font-weight: bold;
+}
+
+#main_page_next_text {
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+    font-weight: bold;
+}
+
+#search_country {
+    width: 300px;
+    margin: 10px;
+    height: 50px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px sold black;
+    font-weight: bold;
+}
+
+#search_city {
+    width: 300px;
+    margin: 10px;
+    height: 50px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px sold black;
+    font-weight: bold;
+}
+
+#search {
+    width: 300px;
+    margin: 10px;
+    height: 50px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px sold black;
+}
+
+#main_forms {
+    display: flex;
+    align-items: center;
+    justify-items: center; 
+}
+
+#country_button {
+    background: #e0b0ff;
+    color: black;
+    padding: 5px 20px;
+    font-size: 16px;
+    height: 50px;
+    width: 100px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#city_button {
+    background: #e0b0ff;
+    color: black;;
+    padding: 5px 20px;
+    font-size: 16px;
+    height: 50px;
+    width: 100px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#sight_button {
+    background: #e0b0ff;
+    color: black;
+    padding: 5px 20px;
+    font-size: 16px;
+    height: 50px;
+    width: 100px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#main_body {
+    background-color: #FDFD96;
+}
+
+#new_city_link {
+    text-decoration: none;
+    font-size: 50px;
+    color: black;
+    padding: 40px;
+}
+
+#visited_cities_link {
+    text-decoration: none;
+    font-size: 50px;
+    color: black;
+    padding: 40px;
+}
+
+#unvisited_cities_link {
+    text-decoration: none;
+    font-size: 50px;
+    color: black;
+    padding: 40px;
+}
+
+.city_menu {
+    list-style-type: none;
+}
+
+#new_country_link {
+    text-decoration: none;
+    font-size: 50px;
+    color: black;
+    padding: 40px;
+}
+
+#visited_countries_link {
+    text-decoration: none;
+    font-size: 50px;
+    color: black;
+    padding: 40px;
+}
+
+#unvisited_countries_link {
+    text-decoration: none;
+    font-size: 50px;
+    color: black;
+    padding: 40px;
+}
+
+.country_menu {
+    list-style-type: none;
+}
+
+#new_city_header {
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: #FADADD;
+    padding: 20px;
+    height: 60px;
+}
+
+#new_country_header {
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: #FADADD;
+    padding: 20px;
+    height: 60px;
+}

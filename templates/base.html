@@ -7,17 +7,34 @@
   <link rel="stylesheet" href="/static/style.css">
   <title>My Bucket List</title>
 </head>
-<body>
+<body id="main_body">
   <header>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/countries">Countries</a></li>
-        <li><a href="/cities">Cities</a></li>
-        <li><a href="/search">Search</a></li>
+    <nav id="main_nav">
+      <ul id="main_nav_list">
+        <li><a id="home_link" href="/">Home</a></li>
+        <li><a id="countries_link" href="/countries">Countries</a></li>
+        <li><a id="cities_link" href="/cities">Cities</a></li>
+      </ul>
+
+        <div id="main_forms">
+        <br><form name="search" action="" method="GET">
+          <input type="text" id="search_country" name="search_country" placeholder="Search countries...">
+          <button id="country_button" type="submit">Search</button>
+            </form>
+
+        <form name="search" action="" method="GET">
+          <input type="text" id="search_city" name="search_city" placeholder="Search cities...">
+          <button id="city_button" type="submit">Search</button>
+            </form>
+
+        <form name="search" action="" method="POST">
+          <input type="text" id="search" name="search_sight" placeholder="Search sights...">
+            <button id="sight_button" type="submit" value="submit">Search</button>
+              </form>
+            </div>
 
         
-      </ul>
+
     </nav>
   </header>
   

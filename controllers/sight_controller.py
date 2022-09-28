@@ -38,7 +38,8 @@ def create_sight():
 @sights_blueprint.route('/cities/<id>/sights')
 def show_sight(id):
     sight = sight_repository.select(id)
-    return render_template('sights/show.html', sight = sight)
+    sights = sight_repository.select_all()
+    return render_template('sights/show.html', sight = sight, sights = sights)
 
 # EDIT
 # GET '/tasks/<id>/edit'
@@ -69,13 +70,12 @@ def delete_sight(id):
     sight_repository.delete(id)
     return redirect('/sights')
 
-# # SEARCH
-@sights_blueprint.route('/search', methods=["GET"])
-def search_sights():
-    # sight = sight_repository.select(id)
-    return render_template('/search.html')
 
-@sights_blueprint.route('/search', methods=["GET"])
-def search_sights_input(search_input):
-    
-    return render_template('sights/show.html')
+# # SEARCH '/cities/<id>/sights'
+# @sights_blueprint.route("/cities/<id>/sights", methods=["POST", "GET"])
+# def search(searched_sight):
+#         sight = request.form["searched_sight"]
+#         if sight == sight.sight_name:
+#             return redirect('/cities/<id>/sights')
+#         else:
+#             return render_template("/")

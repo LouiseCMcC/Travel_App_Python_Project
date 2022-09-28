@@ -68,6 +68,8 @@ sight9 = Sight("Serpentine Column", city9, True)
 sight_repository.save(sight9)
 sight10 = Sight("Ruins of Ephesus", city10, False)
 sight_repository.save(sight10)
+sight11 = Sight("Museum", city1, False)
+sight_repository.save(sight11)
 
 sight_repository.select_all()
 
