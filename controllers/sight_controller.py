@@ -38,7 +38,6 @@ def create_sight():
 @sights_blueprint.route('/cities/<id>/sights')
 def show_sight(id):
     sight = sight_repository.select(id)
-    # pdb.set_trace()
     return render_template('sights/show.html', sight = sight)
 
 # EDIT
@@ -69,3 +68,14 @@ def update_city(id):
 def delete_sight(id):
     sight_repository.delete(id)
     return redirect('/sights')
+
+# # SEARCH
+@sights_blueprint.route('/search', methods=["GET"])
+def search_sights():
+    # sight = sight_repository.select(id)
+    return render_template('/search.html')
+
+@sights_blueprint.route('/search', methods=["GET"])
+def search_sights_input(search_input):
+    
+    return render_template('sights/show.html')

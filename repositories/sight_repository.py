@@ -58,4 +58,11 @@ def delete(id):
 def update(sight):
     sql = "UPDATE sights SET (sight_name, city_id, visited) = (%s, %s, %s) WHERE id = %s"
     values = [sight.sight_name, sight.city.id, sight.visited, sight.id]
+    run_sql(sql, values) 
+
+
+def search(sight_input):
+    sql = "SELECT * FROM sights WHERE sight = %s"
+    values = [sight_input]
     run_sql(sql, values)
+
