@@ -57,7 +57,8 @@ sights_blueprint = Blueprint("sights", __name__)
 @sights_blueprint.route('/cities/<id>/sights')
 def show_sight(id):
     sight = sight_repository.select(id)
-    return render_template('cities/sights/show.html', sight = sight)
+    return render_template('sights/show.html', sight = sight)
+
 
 
 
