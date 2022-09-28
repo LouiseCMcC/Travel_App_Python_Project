@@ -2,17 +2,17 @@ o{% extends 'base.html' %}
 
 {% block content %}
 
-<form action="/cities" method="post">
+<form action="/sights" method="post">
     <div>
-        <label for="city_name">City: </label>
-        <input type="text" id="city_name" name="city_name" placeholder="City">
+        <label for="sight_name">Sight: </label>
+        <input type="text" id="sight_name" name="sight_name" placeholder="Sight">
     </div>
     
     <div>
-        <label for="country">Country: </label>
-        <select id="country" name="country_id">
-            {% for country in countries %}
-            <option value="{{country.id}}">{{country.country_name}}</option>
+        <label for="city">City: </label>
+        <select id="city" name="city_id">
+            {% for city in cities %}
+            <option value="{{city.id}}">{{city.city_name}}</option>
             {% endfor %}
         </select>
     </div>
@@ -25,7 +25,7 @@ o{% extends 'base.html' %}
         </select>
     </div>
 
-    <button type="submit">Add City</button>
+    <button type="submit">Add Sight</button>
 
 </form>
 

@@ -8,85 +8,64 @@ from repositories import sight_repository as sight_repository
 from models.city import City
 from models.country import Country
 from models.sight import Sight
-
+import pdb
 sights_blueprint = Blueprint("sights", __name__)
 
 # RESTful CRUD Routes
 
-# # SIGHTS PAGE
-# @sights_blueprint.route("/cities/sights")
-# def cities():
-#     return render_template("cities/index.html")
-
-# # INDEX
-# # GET '/cities'
-# # INDEX UNVISITED CITIES
-# @cities_blueprint.route("/cities/unvisited")
-# def unvisited_cities():
-#     cities = city_repository.select_all()
-#     return render_template("cities/unvisited.html", cities = cities)
-
-# # INDEX VISITED CITIES
-# @cities_blueprint.route("/cities/visited")
-# def visited_cities():
-#     cities = city_repository.select_all()
-#     return render_template("cities/visited.html", cities = cities)
-
 # # NEW
-# # GET '/tasks/new'
-# @cities_blueprint.route('/cities/new')
-# def new_city():
-#     cities = city_repository.select_all()
-#     countries = country_repository.select_all()
-#     return render_template('cities/new.html', cities = cities, countries = countries)
+# GET '/tasks/new'
+@sights_blueprint.route('/sights/new')
+def new_sight():
+    sights = sight_repository.select_all()
+    cities = city_repository.select_all()
+    return render_template('sights/new.html', sights = sights, cities = cities)
 
 # # CREATE
 # # POST '/tasks'
-# @cities_blueprint.route('/cities', methods=['POST'])
-# def create_city():
-#     city_name = request.form['city_name']
-#     country_id = request.form['country_id']
-#     visited = request.form['visited']
-#     country = country_repository.select(country_id)
-#     city = City(city_name, country, visited)
-#     city_repository.save(city)
-#     return redirect('/cities')
+@sights_blueprint.route('/sights', methods=['POST'])
+def create_sight():
+    sight_name = request.form['sight_name']
+    city_id = request.form['city_id']
+    visited = request.form['visited']
+    city = city_repository.select(city_id)
+    sight = Sight(sight_name, city, visited)
+    sight_repository.save(sight)
+    return redirect('/sights')
 
 # SHOW
 # GET '/tasks/<id>'
 @sights_blueprint.route('/cities/<id>/sights')
 def show_sight(id):
     sight = sight_repository.select(id)
+    # pdb.set_trace()
     return render_template('sights/show.html', sight = sight)
 
-
-
-
-# # EDIT
-# # GET '/tasks/<id>/edit'
-# @cities_blueprint.route('/cities/<id>/edit')
-# def edit_city(id):
-#     city = city_repository.select(id)
-#     cities = city_repository.select_all()
-#     countries = country_repository.select_all()
-#     return render_template('cities/edit.html', city = city, cities = cities, countries = countries)
+# EDIT
+# GET '/tasks/<id>/edit'
+@sights_blueprint.route('/sights/<id>/edit')
+def edit_sight(id):
+    sight = sight_repository.select(id)
+    sights = sight_repository.select_all()
+    cities = city_repository.select_all()
+    return render_template('sights/edit.html', sight = sight, sights = sights, cities = cities)
 
 # # UPDATE 
 # # PUT '/tasks/<id>'
-# @cities_blueprint.route('/cities/<id>', methods=['POST'])
-# def update_city(id):
-#     city_name = request.form['city_name']
-#     country_id = request.form['country_id']
-#     country = country_repository.select(country_id)
-#     visited = request.form['visited']
-#     city_to_update = City(city_name, country, visited, id)
-#     city_repository.update(city_to_update)
-#     return redirect('/cities')
+@sights_blueprint.route('/sights/<id>', methods=['POST'])
+def update_city(id):
+    sight_name = request.form['sight_name']
+    city_id = request.form['city_id']
+    city = city_repository.select(city_id)
+    visited = request.form['visited']
+    sight_to_update = Sight(sight_name, city, visited, id)
+    sight_repository.update(sight_to_update)
+    return redirect('/sights')
 
 
-# # DELETE
-# # DELETE '/tasks/<id>'
-# @cities_blueprint.route('/cities/<id>/delete', methods=['POST'])
-# def delete_city(id):
-#     city_repository.delete(id)
-#     return redirect('/cities')
+# DELETE
+# DELETE '/tasks/<id>'
+@sights_blueprint.route('/sights/<id>/delete', methods=['POST'])
+def delete_sight(id):
+    sight_repository.delete(id)
+    return redirect('/sights')

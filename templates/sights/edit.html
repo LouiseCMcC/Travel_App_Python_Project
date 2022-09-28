@@ -1,18 +1,18 @@
 {% block content %}
 
-<form action="/cities/{{city.id}}" method="post">
+<form action="/cities/sights/{{sight.id}}" method="post">
 <div>
-    <label for="city_name">City: </label>
-    <input type="text" id="city_name" name="city_name" value="{{city.city_name}}">
+    <label for="sight_name">Sight: </label>
+    <input type="text" id="sight_name" name="sight_name" value="{{sight.sight_name}}">
 </div>
 
 <div>
-    <label for="country">Country: </label>
-    <select id="country" name="country_id">
-        {% for country in countries %}
-        <option value="{{ country.id }}"
-        {% if city.country_id == country.id %} selected="selected" {% endif %}>
-        {{ country.country_name }}
+    <label for="city">City: </label>
+    <select id="city" name="city_id">
+        {% for city in cities %}
+        <option value="{{ city.id }}"
+        {% if sight.city_id == city.id %} selected="selected" {% endif %}>
+        {{ city.city_name }}
     </option>
     {% endfor %}
     </select>
@@ -23,17 +23,17 @@
     <select id="visited" name="visited">
         
         <option value="true"
-        {% if city.visited == True %} selected="selected" {% endif %}>
+        {% if sight.visited == True %} selected="selected" {% endif %}>
         True
     </option>
     <option value="false"
-    {% if city.visited == False %} selected="selected" {% endif %}>
+    {% if sight.visited == False %} selected="selected" {% endif %}>
     False
 </option>
     </select>
 </div>
 
-<button type="submit">Update Country</button>
+<button type="submit">Update Sight</button>
 
 </form>
 {% endblock %}
