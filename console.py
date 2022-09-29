@@ -15,6 +15,8 @@ import repositories.photo_repository as photo_repository
 city_repository.delete_all()
 country_repository.delete_all()
 sight_repository.delete_all()
+blog_repository.delete_all()
+photo_repository.delete_all()
 
 country1 = Country("Egypt", "Africa", True)
 country_repository.save(country1)

@@ -5,23 +5,23 @@
 
 <form action="/countries" method="post">
     <div>
-        <label for="country_name">Country: </label>
+        <br><label id="new_country_text_box" for="country_name">Country: </label>
         <input type="text" id="country_name" name="country_name" placeholder="Country">
     </div>
     <div>
-        <label for="continent">Continent: </label>
+        <br><label id="new_continent_text_box" for="continent">Continent: </label>
         <input type="text" id="continent" name="continent" placeholder="Continent">
     </div>
 
     <div>
-        <label for="visited">Visited? </label>
+        <br><label id="new_country_visited_text_box"for="visited">Visited? </label>
         <select id="visited" name="visited">
             <option value="true">True</option>
             <option value="false">False</option>
         </select>
     </div>
 
-    <button type="submit">Add Country</button>
+    <br><button id="new_country_button" type="submit">Add Country</button>
 
 </form>
 

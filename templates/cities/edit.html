@@ -1,14 +1,15 @@
+<header id="edit_city_header">Edit My City.</header>
 {% extends "base.html" %}
 {% block content %}
 
-<form action="/cities/{{city.id}}" method="post">
+<form id="edit_my_city_name" action="/cities/{{city.id}}" method="post">
 <div>
     <label for="city_name">City: </label>
     <input type="text" id="city_name" name="city_name" value="{{city.city_name}}">
 </div>
 
 <div>
-    <label for="country">Country: </label>
+    <br><label id="edit_my_country_name" for="country">Country: </label>
     <select id="country" name="country_id">
         {% for country in countries %}
         <option value="{{ country.id }}"
@@ -20,7 +21,7 @@
 </div>
 
 <div>
-    <label for="visited">Visited: </label>
+    <br><label id="edit_my_country_visited" for="visited">Visited: </label>
     <select id="visited" name="visited">
         
         <option value="true"
@@ -34,7 +35,7 @@
     </select>
 </div>
 
-<button type="submit">Update Country</button>
+<br><button id="edit_city_button" type="submit">Update Country</button>
 
 </form>
 {% endblock %}

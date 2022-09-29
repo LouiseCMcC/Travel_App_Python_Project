@@ -1,15 +1,16 @@
+<header id="new_sight_header">Add a New My Sight.</header>
 {% extends 'base.html' %}
 
 {% block content %}
 
 <form action="/sights" method="post">
     <div>
-        <label for="sight_name">Sight: </label>
+        <label id="edit_my_sight_name" for="sight_name">Sight: </label>
         <input type="text" id="sight_name" name="sight_name" placeholder="Sight">
     </div>
     
     <div>
-        <label for="city">City: </label>
+        <br><label id="edit_my_sight_city" for="city">City: </label>
         <select id="city" name="city_id">
             {% for city in cities %}
             <option value="{{city.id}}">{{city.city_name}}</option>
@@ -18,14 +19,14 @@
     </div>
 
     <div>
-        <label for="visited">Visited? </label>
+        <br><label id="edit_my_sight_visited" for="visited">Visited? </label>
         <select id="visited" name="visited">
             <option value="true">True</option>
             <option value="false">False</option>
         </select>
     </div>
 
-    <button type="submit">Add Sight</button>
+    <br><button id="edit_sight_button" type="submit">Add Sight</button>
 
 </form>
 

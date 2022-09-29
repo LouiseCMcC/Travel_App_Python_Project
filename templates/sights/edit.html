@@ -1,13 +1,15 @@
+<header id="edit_sight_title">Edit My Site.</header>
+{% extends "base.html" %}
 {% block content %}
 
 <form action="/cities/sights/{{sight.id}}" method="post">
 <div>
-    <label for="sight_name">Sight: </label>
+    <label id="edit_my_sight_name" for="sight_name">Sight: </label>
     <input type="text" id="sight_name" name="sight_name" value="{{sight.sight_name}}">
 </div>
 
 <div>
-    <label for="city">City: </label>
+    <br><label id="edit_my_sight_city" for="city">City: </label>
     <select id="city" name="city_id">
         {% for city in cities %}
         <option value="{{ city.id }}"
@@ -19,7 +21,7 @@
 </div>
 
 <div>
-    <label for="visited">Visited: </label>
+    <br><label id="edit_my_sight_visited" for="visited">Visited: </label>
     <select id="visited" name="visited">
         
         <option value="true"
@@ -33,7 +35,7 @@
     </select>
 </div>
 
-<button type="submit">Update Sight</button>
+<br><button id="edit_sight_button" type="submit">Update Sight</button>
 
 </form>
 {% endblock %}

@@ -251,11 +251,14 @@
     color: black;
     padding: 40px;
 }
-#photos_header {
-    text-decoration: none;
-    font-size: 50px;
-    color: black;
-    padding: 40px;
+.my_photos_header {
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: #FADADD;
+    padding: 20px;
+    height: 60px;
 }
 
 #new_photo_link {
@@ -273,15 +276,678 @@
 } 
 
 #previous_blogs_header {
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: #FADADD;
+    padding: 20px;
+    height: 60px;
+}
+
+#new_blog_header {
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: #FADADD;
+    padding: 20px;
+    height: 60px;
+}
+
+#previous_blogs_header {
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: #FADADD;
+    padding: 20px;
+    height: 60px;
+} 
+
+#new_photo_header {
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: #FADADD;
+    padding: 20px;
+    height: 60px;
+}
+
+#previous_photos_header {
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: #FADADD;
+    padding: 20px;
+    height: 60px;
+}
+
+#unvisited_countries_header {
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: #FADADD;
+    padding: 20px;
+    height: 60px; 
+}
+
+#visited_countries_header {
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: #FADADD;
+    padding: 20px;
+    height: 60px; 
+}
+
+#unvisited_cities_header {
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: #FADADD;
+    padding: 20px;
+    height: 60px; 
+}
+
+#countries_visited_countries_link {
     text-decoration: none;
     font-size: 50px;
     color: black;
     padding: 40px;
 }
 
-#new_blog_header {
+#countries_unvisited_countries_link {
     text-decoration: none;
     font-size: 50px;
     color: black;
     padding: 40px;
+}
+
+#visited_countries_countries {
+    font-size: 30px;
+    color: black;
+    padding: 20px;
+}
+
+#visited_countries_countries_url {
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    padding: 20px;
+    color: #A7C7E7;
+}
+
+#unvisited_countries_visited_countries_link {
+    text-decoration: none;
+    font-size: 50px;
+    color: black;
+    padding: 40px;
+}
+
+#unvisited_countries_countries_link {
+    text-decoration: none;
+    font-size: 50px;
+    color: black;
+    padding: 40px;
+}
+
+#unvisited_countries_countries_url {
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    padding: 20px;
+    color: #A7C7E7;
+}
+
+#unvisited_countries_countries {
+    font-size: 30px;
+    color: black;
+    padding: 20px;
+}
+
+/* #my_visited_cities_header {
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: #FADADD;
+    padding: 20px;
+    height: 60px; 
+} */
+
+#city_link_on_visited_cities {
+    text-decoration: none;
+    font-size: 50px;
+    color: black;
+    padding: 40px;
+}
+
+#unvisited_cities_link_on_visited_cities {
+    text-decoration: none;
+    font-size: 50px;
+    color: black;
+    padding: 40px;
+}
+
+#cities_in_visited_cities {
+    font-size: 30px;
+    color: black;
+    padding: 20px;
+}
+
+#city_name_url_in_visited_cities {
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    padding: 20px;
+    color: #A7C7E7;
+}
+
+#sight_name_url_in_visited_cities {
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    padding: 20px;
+    color: #FFA400;
+}
+
+#city_link_on_unvisited_cities {
+    text-decoration: none;
+    font-size: 50px;
+    color: black;
+    padding: 40px;
+}
+
+#visited_cities_link_on_unvisited_cities {
+    text-decoration: none;
+    font-size: 50px;
+    color: black;
+    padding: 40px;
+}
+
+#city_name_url_on_unvisited_cities {
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    padding: 20px;
+    color: #A7C7E7;
+}
+
+#cities_in_unvisited_cities {
+    font-size: 30px;
+    color: black;
+    padding: 20px;
+}
+
+#sight_name_url_in_visited_cities {
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    padding: 20px;
+    color: #FFA400;
+}
+
+#my_sights_header {
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: #FADADD;
+    padding: 20px;
+    height: 60px; 
+}
+
+#new_sight_url {
+    text-decoration: none;
+    font-size: 50px;
+    color: black;
+    padding: 40px; 
+}
+
+#sight_in_sight {
+    font-size: 30px;
+    color: black;
+    padding: 20px;
+}
+
+#sights_edit_link {
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    padding: 20px;
+    color: #FFA400; 
+}
+
+#new_city_text_box {
+    width: 300px;
+    margin: 10px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px sold black;
+    font-weight: bold;
+}
+
+#new_city_name_text_box {
+    width: 300px;
+    margin: 10px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px sold black;
+    font-weight: bold;
+}
+
+#new_city_visited_text_box {
+    width: 300px;
+    margin: 10px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px sold black;
+    font-weight: bold;
+}
+
+#new_city_button {
+    background: #e0b0ff;
+    color: black;
+    padding: 5px 20px;
+    font-size: 16px;
+    height: 50px;
+    width: 100px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#new_country_text_box {
+    width: 300px;
+    margin: 10px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px sold black;
+    font-weight: bold; 
+}
+
+#new_continent_text_box {
+    width: 300px;
+    margin: 10px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px sold black;
+    font-weight: bold; 
+}
+
+#new_country_visited_text_box {
+    width: 300px;
+    margin: 10px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px sold black;
+    font-weight: bold; 
+}
+
+#new_country_button {
+    background: #e0b0ff;
+    color: black;
+    padding: 5px 20px;
+    font-size: 16px;
+    height: 50px;
+    width: 100px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#show_my_countries_header {
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: #FADADD;
+    padding: 20px;
+    height: 60px;
+}
+
+#show_country_name {
+    font-size: 30px;
+    color: black;
+    padding: 20px;
+}
+
+#show_continent_name {
+    font-size: 30px;
+    color: black;
+    padding: 20px;
+}
+
+#show_visited_name {
+    font-size: 30px;
+    color: black;
+    padding: 20px;
+}
+
+#countries_edit_link {
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    padding: 20px;
+    color: #FFA400; 
+} 
+
+#show_cities_header {
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: #FADADD;
+    padding: 20px;
+    height: 60px;
+}
+
+#show_city_name {
+    font-size: 30px;
+    color: black;
+    padding: 20px;
+}
+
+#show_city_country {
+    font-size: 30px;
+    color: black;
+    padding: 20px;
+}
+
+#show_city_visited {
+    font-size: 30px;
+    color: black;
+    padding: 20px;
+}
+
+#cities_edit_link {
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    padding: 20px;
+    color: #FFA400; 
+}
+
+#edit_country_header {
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: #FADADD;
+    padding: 20px;
+    height: 60px;
+}
+
+#edit_my_country_name {
+    width: 300px;
+    margin: 10px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px sold black;
+    font-weight: bold; 
+}
+
+#edit_country_button {
+    background: #e0b0ff;
+    color: black;
+    padding: 5px 20px;
+    font-size: 16px;
+    height: 50px;
+    width: 100px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#edit_city_header{
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: #FADADD;
+    padding: 20px;
+    height: 60px;
+}
+
+#edit_my_city_name {
+    width: 300px;
+    margin: 10px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px sold black;
+    font-weight: bold; 
+}
+
+#edit_my_country_name {
+    width: 300px;
+    margin: 10px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px sold black;
+    font-weight: bold; 
+}
+
+#edit_my_country_visited {
+    width: 300px;
+    margin: 10px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px sold black;
+    font-weight: bold; 
+}
+
+#edit_city_button {
+    background: #e0b0ff;
+    color: black;
+    padding: 5px 20px;
+    font-size: 16px;
+    height: 50px;
+    width: 100px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#edit_sight_title {
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: #FADADD;
+    padding: 20px;
+    height: 60px;
+}
+
+#edit_my_sight_name {
+    width: 300px;
+    margin: 10px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px sold black;
+    font-weight: bold; 
+}
+
+#edit_my_sight_city {
+    width: 300px;
+    margin: 10px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px sold black;
+    font-weight: bold; 
+}
+
+#edit_my_sight_visited {
+    width: 300px;
+    margin: 10px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px sold black;
+    font-weight: bold; 
+}
+
+#edit_sight_button {
+    background: #e0b0ff;
+    color: black;
+    padding: 5px 20px;
+    font-size: 16px;
+    height: 50px;
+    width: 100px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#new_blog_name {
+    width: 300px;
+    margin: 10px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px sold black;
+    font-weight: bold; 
+}
+
+#new_blog_date {
+    width: 300px;
+    margin: 10px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px sold black;
+    font-weight: bold; 
+}
+
+#new_blog_content {
+    width: 300px;
+    margin: 10px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px sold black;
+    font-weight: bold; 
+}
+
+#new_blog_button {
+    background: #e0b0ff;
+    color: black;
+    padding: 5px 20px;
+    font-size: 16px;
+    height: 50px;
+    width: 100px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#new_sight_header {
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: #FADADD;
+    padding: 20px;
+    height: 60px;
+}
+
+#edit_my_sight_name {
+    width: 300px;
+    margin: 10px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px sold black;
+    font-weight: bold; 
+}
+
+#edit_my_sight_city {
+    width: 300px;
+    margin: 10px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px sold black;
+    font-weight: bold; 
+}
+
+#edit_my_sight_visited {
+    width: 300px;
+    margin: 10px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px sold black;
+    font-weight: bold; 
+}
+
+#edit_sight_button {
+    background: #e0b0ff;
+    color: black;
+    padding: 5px 20px;
+    font-size: 16px;
+    height: 50px;
+    width: 100px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#add_new_photo_location {
+    width: 300px;
+    margin: 10px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px sold black;
+    font-weight: bold; 
+}
+
+#add_new_photo_date {
+    width: 300px;
+    margin: 10px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px sold black;
+    font-weight: bold; 
+}
+
+#add_new_photo_url {
+    width: 300px;
+    margin: 10px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px sold black;
+    font-weight: bold; 
+}
+
+#add_new_photo_button {
+    background: #e0b0ff;
+    color: black;
+    padding: 5px 20px;
+    font-size: 16px;
+    height: 50px;
+    width: 100px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
 }

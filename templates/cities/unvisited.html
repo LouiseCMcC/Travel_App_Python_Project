@@ -1,12 +1,12 @@
+<header id="unvisited_cities_header">My Unvisited Cities.</header>
 {% extends "base.html" %}
 {% block content %}
-<h1>My Unvisited Cities</h1>
 <body>
   <header>
     <nav>
       <ul class="menu">
-        <li><a href="/cities">Cities</a></li>
-        <li><a href="/cities/visited">Visited Cities</a></li>
+        <li><a id="city_link_on_unvisited_cities"href="/cities">Cities</a></li>
+        <li><a id="visited_cities_link_on_unvisited_cities"href="/cities/visited">Visited Cities</a></li>
       </ul>
     </nav>
   </header>
@@ -14,9 +14,9 @@
 {% for city in cities %}
   {% if city.visited == False %}
   <div class="city">
-    <div class="content">
+    <div id="cities_in_unvisited_cities"class="content">
       City:
-      <a href="/cities/{{city.id}}">{{city.city_name}}</a>
+      <a id="city_name_url_on_unvisited_cities" href="/cities/{{city.id}}">{{city.city_name}}</a>
       <div class="country">
           Country: {{city.country.country_name}}
        
@@ -35,7 +35,7 @@
               </div>
 
               <div class="sights">
-                <a href="{{city.id}}/sights">Sights</a>
+                <a id="sight_name_url_in_visited_cities" href="{{city.id}}/sights">Sights</a>
               </div>
 
               <form class="delete-form" action="/cities/{{city.id}}/delete" method="POST">

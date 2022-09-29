@@ -1,18 +1,18 @@
+<header id="my_sights_header">My Sights.</header>
 {% extends "base.html" %}
 {% block content %}
-<h1>My Sights</h1>
 <body>
     <header>
         <nav>
             <ul class="menu">
-                <li><a href="/sights/new">New Sight</a></li>
+                <li><a id="new_sight_url" href="/sights/new">New Sight</a></li>
             </ul>
         </nav>
     </header>
 </body>
 
     <div class="sight">
-        <div class="content">
+        <div id="sight_in_sight" class="content">
             <p>{{sight.sight_name}}</p>
             <p>Visited: {% if sight.visited == True %}
                 <span> &#10004; </span>
@@ -21,7 +21,7 @@
                 {% endif %}
             </p>
 
-            <p><a href="/sights/{{sight.id}}/edit">Edit</a></p>
+            <p><a id="sights_edit_link" href="/sights/{{sight.id}}/edit">Edit</a></p>
 
             <form class="delete-form" action="/sights/{{sight.id}}/delete" method="POST">
                 <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>

@@ -1,12 +1,12 @@
+<header id="unvisited_countries_header">My Unvisited Countries.</header>
 {% extends "base.html" %}
 {% block content %}
-<h1>My Unvisited Countries</h1>
 <body>
   <header>
     <nav>
       <ul class="menu">
-        <li><a href="/countries">Countries</a></li>
-        <li><a href="/countries/visited">Visited Countries</a></li>
+        <li><a id="unvisited_countries_countries_link" href="/countries">Countries</a></li>
+        <li><a id="unvisited_countries_visited_countries_link" href="/countries/visited">Visited Countries</a></li>
  
       </ul>
     </nav>
@@ -15,13 +15,13 @@
 {% for country in countries %}
     {% if country.visited == False%}
   <div class="country">
-    <div class="content">
+    <div id="unvisited_countries_countries" class="content">
       Country: 
-      <a href="/countries/{{country.id}}">{{country.country_name}}</a>
-      <div class="continent">
+      <a id="unvisited_countries_countries_url" href="/countries/{{country.id}}">{{country.country_name}}</a>
+      <div id="unvisited_countries_continent" class="continent">
         Continent: {{country.continent}}
 
-        <div class="visited">
+        <div id="unvisited_countries_visited" class="visited">
           Visited: {% if country.visited == True %}
           <span> &#10004; </span>
           {% else %}

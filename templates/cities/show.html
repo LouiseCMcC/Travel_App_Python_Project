@@ -1,17 +1,18 @@
+<header id="show_cities_header">My Cities.</header>
 {% extends "base.html" %}
 {% block content %}
 
 <div>
-    <p>{{city.city_name}},</p>
-    <p>{{city.country.country_name}}</p>
+    <p id="show_city_name">{{city.city_name}},</p>
+    <p id="show_city_country">{{city.country.country_name}}</p>
     <!-- <p>Visited? {{city.visited}}</p> -->
-    <p>Visited: {% if city.visited == True %}
+    <p id="show_city_visited">Visited: {% if city.visited == True %}
         <span> &#10004; </span>
         {% else %}
         <span> &#10006; </span>
         {% endif %}
     </p>
-    <p><a href="/cities/{{city.id}}/edit">Edit</a></p>
+    <p><a id="cities_edit_link" href="/cities/{{city.id}}/edit">Edit</a></p>
 </div>
 
 {% endblock %}

@@ -1,17 +1,18 @@
+<header id="show_my_countries_header">My Countries.</header>
 {% extends "base.html" %}
 {% block content %}
 
 <div>
-    <p>{{country.country_name}},</p>
-    <p>{{country.continent}}</p>
+    <p id="show_country_name">{{country.country_name}},</p>
+    <p id="show_continent_name">{{country.continent}}</p>
     <!-- <p>Visited? {{country.visited}}</p> -->
-    <p>Visited: {% if country.visited == True %}
+    <p id="show_visited_name">Visited: {% if country.visited == True %}
         <span> &#10004; </span>
         {% else %}
         <span> &#10006; </span>
         {% endif %}
     </p>
-    <p><a href="/countries/{{country.id}}/edit">Edit</a></p>
+    <p><a id="countries_edit_link" href="/countries/{{country.id}}/edit">Edit</a></p>
 </div>
 
 {% endblock %}

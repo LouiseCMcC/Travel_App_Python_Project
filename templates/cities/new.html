@@ -5,12 +5,12 @@
 
 <form action="/cities" method="post">
     <div>
-        <label for="city_name">City: </label>
+        <br><label id="new_city_text_box" for="city_name">City: </label>
         <input type="text" id="city_name" name="city_name" placeholder="City">
     </div>
     
     <div>
-        <label for="country">Country: </label>
+        <br><label id="new_city_name_text_box" for="country">Country: </label>
         <select id="country" name="country_id">
             {% for country in countries %}
             <option value="{{country.id}}">{{country.country_name}}</option>
@@ -19,14 +19,14 @@
     </div>
 
     <div>
-        <label for="visited">Visited? </label>
+        <br><label id="new_city_visited_text_box" for="visited">Visited? </label>
         <select id="visited" name="visited">
             <option value="true">True</option>
             <option value="false">False</option>
         </select>
     </div>
 
-    <button type="submit">Add City</button>
+    <br><button id="new_city_button" type="submit">Add City</button>
 
 </form>
 
