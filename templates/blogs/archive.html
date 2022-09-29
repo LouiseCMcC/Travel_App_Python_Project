@@ -1,0 +1,30 @@
+<header id="previous_blogs_header">My Previous Blogs</header>
+{% extends "base.html" %}
+{% block content %}
+
+{% for blog in blogs %}
+<div class="blog">
+    <div class="content">
+        Blog Title:
+        <a href="/blogs/{{blog.id}}">{{blog.blog_name}}</a>
+        <div class="date">
+            Date: {{blog.blog_date}}
+            <div class="blog_content">
+            Content: {{blog.blog_content}}
+            
+        </p>
+        <p><a href="/countries/{{country.id}}/edit">Edit</a></p>
+    </div>
+
+            <form class="delete-form" action="/blogs/{{blog.id}}/delete" method="POST">
+                <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
+              </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    {% endfor %}
+{% endblock %}
+
+

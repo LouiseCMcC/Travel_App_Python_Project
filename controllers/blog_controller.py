@@ -25,13 +25,46 @@ def new_blog():
     blogs = blog_repository.select_all()
     return render_template('blogs/new.html', blogs = blogs)
 
+# CREATE
+# POST '/tasks'
+@blogs_blueprint.route('/blogs', methods=['POST'])
+def create_blog():
+    blog_name = request.form['blog_name']
+    blog_date = request.form['blog_date']
+    blog_content = request.form['blog_content']
+    new_blog = Blog(blog_name, blog_date, blog_content)
+    blog_repository.save(new_blog)
+    return redirect('/blogs')
+
 # ARCHIVE
 @blogs_blueprint.route('/blogs/archive')
 def archived_blogs():
     blogs = blog_repository.select_all()
     return render_template('/blogs/archive.html', blogs=blogs)
 
+ # EDIT
+# # GET '/tasks/<id>/edit'
+@blogs_blueprint.route('/blogs/<id>/edit')
+def edit_blog(id):
+    blog = blog_repository.select(id)
+    blogs = blog_repository.select_all()
+    return render_template('blogs/edit.html', blog = blog, blogs = blogs)
+
+# UPDATE 
+# PUT '/tasks/<id>'
+@blogs_blueprint.route('/blogs/<id>', methods=['POST'])
+def update_blog(id):
+    blog_name = request.form['blog_name']
+    blog_date = request.form['blog_date']
+    blog_content = request.form['blog_content']
+    blog_to_update = Blog(blog_name, blog_date, blog_content, id)
+    blog_repository.update(blog_to_update)
+    return redirect('/blogs')
 
 # DELETE
+@blogs_blueprint.route('/blogs/<id>/delete', methods=['POST'])
+def delete_blog(id):
+    blog_repository.delete(id)
+    return redirect('/blogs')
 
-# DELETE_ALL
+

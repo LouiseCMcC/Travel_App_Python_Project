@@ -1,0 +1,27 @@
+<header id="new_photo_header">Add a New Photo.</header>
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="/photos" method="post">
+    <div>
+        <label for="photo_location">Location: </label>
+        <input type="text" id="photo_name" name="photo_name" placeholder="Photo">
+    </div>
+    
+    <div>
+        <label for="photo_date">Date: </label>
+        <input type="date" id="photo_date" name="photo_date">
+    </div>
+
+    <div>
+        <label for="photo_url">Photo: </label>
+        <input type="text" id="photo_url" name="photo_url" placeholder="photo_url">
+    </div>
+
+
+    <button type="submit">Add Photo</button>
+
+</form>
+
+{% endblock %}

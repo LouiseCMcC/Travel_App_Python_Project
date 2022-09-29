@@ -1,0 +1,23 @@
+<header id="previous_photos_header">My Photos</header>
+{% extends "base.html" %}
+{% block content %}
+
+{% for photo in photos %}
+<div class="photo">
+    <div class="content">
+        Photo Location: {{photo.photo_location}}
+        <div class="date">
+            Photo Date: {{photo.blog_date}}
+            <div class="my_photo">
+            {{photo.photo}}
+            
+            <form class="delete-form" action="/photos/{{photo.id}}/delete" method="POST">
+                <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
+              </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    {% endfor %}
+{% endblock %}

@@ -46,7 +46,6 @@
     background-color: #FADADD;
     padding: 20px;
     height: 60px;
-    <img src="/Users/Shared/codeclan_work/python_project/python_project_code/images/colosseum.jpeg">
 }
 
 #countries_header {
@@ -267,6 +266,20 @@
 }
 
 #prev_photos_link {
+    text-decoration: none;
+    font-size: 50px;
+    color: black;
+    padding: 40px;
+} 
+
+#previous_blogs_header {
+    text-decoration: none;
+    font-size: 50px;
+    color: black;
+    padding: 40px;
+}
+
+#new_blog_header {
     text-decoration: none;
     font-size: 50px;
     color: black;

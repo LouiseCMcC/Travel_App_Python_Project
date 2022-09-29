@@ -1,0 +1,27 @@
+<header id="new_blog_header">Add a New Blog.</header>
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="/blogs" method="post">
+    <div>
+        <label for="blog_name">Title: </label>
+        <input type="text" id="blog_name" name="blog_name" placeholder="Title">
+    </div>
+    
+    <div>
+        <label for="date">Date: </label>
+        <input type="date" id="blog_date" name="blog_date">
+    </div>
+
+    <div>
+        <label for="blog_content">Content: </label>
+        <input type="text" id="blog_content" name="blog_content" placeholder="Blog Content">
+    </div>
+
+
+    <button type="submit">Add Blog</button>
+
+</form>
+
+{% endblock %}

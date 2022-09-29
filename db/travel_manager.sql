@@ -7,12 +7,14 @@ DROP TABLE IF EXISTS photos;
 CREATE TABLE photos (
     id SERIAL PRIMARY KEY,
     photo_date INT,
-    photo_location VARCHAR (255)
+    photo_location VARCHAR (255),
+    photo_url VARCHAR (255)
 );
 
 CREATE TABLE blogs (
     id SERIAL PRIMARY KEY,
     blog_name VARCHAR(255),
+    blog_date INT,
     blog_content TEXT
 );
 

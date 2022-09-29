@@ -29,3 +29,11 @@ def new_photo():
 def archived_photos():
     photos = photo_repository.select_all()
     return render_template('/photos/archive.html', photos=photos)
+
+# DELETE
+@photos_blueprint.route('/photos/<id>/delete', methods=['POST'])
+def delete_photo(id):
+    photo_repository.delete(id)
+    return redirect('/photos')
+
+
