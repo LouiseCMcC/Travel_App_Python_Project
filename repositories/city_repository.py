@@ -3,6 +3,7 @@ from db.run_sql import run_sql
 from models.sight import Sight
 from models.country import Country
 from models.city import City
+from models.blog import Blog
 
 import repositories.country_repository as country_repository
 import pdb

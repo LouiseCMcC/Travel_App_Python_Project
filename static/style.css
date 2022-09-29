@@ -19,6 +19,13 @@
     padding: 40px;
 }
 
+#blog_link {
+    text-decoration: none;
+    font-size: 50px;
+    color: black;
+    padding: 40px; 
+}
+
 #main_nav_list {
     list-style-type: none;
     display: flex;
@@ -221,4 +228,28 @@
     background-color: #FADADD;
     padding: 20px;
     height: 60px;
+}
+
+#blogs_header {
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: #FADADD;
+    padding: 20px;
+    height: 60px;
+}
+
+#new_blog_link {
+    text-decoration: none;
+    font-size: 50px;
+    color: black;
+    padding: 40px;
+}
+
+#prev_blogs_link {
+    text-decoration: none;
+    font-size: 50px;
+    color: black;
+    padding: 40px;
 }
