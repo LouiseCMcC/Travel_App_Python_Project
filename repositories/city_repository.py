@@ -4,6 +4,7 @@ from models.sight import Sight
 from models.country import Country
 from models.city import City
 from models.blog import Blog
+from models.photo import Photo
 
 import repositories.country_repository as country_repository
 import pdb

@@ -181,10 +181,6 @@
     padding: 40px;
 }
 
-.city_menu {
-    list-style-type: none;
-}
-
 #new_country_link {
     text-decoration: none;
     font-size: 50px;
@@ -204,10 +200,6 @@
     font-size: 50px;
     color: black;
     padding: 40px;
-}
-
-.country_menu {
-    list-style-type: none;
 }
 
 #new_city_header {
@@ -248,6 +240,33 @@
 }
 
 #prev_blogs_link {
+    text-decoration: none;
+    font-size: 50px;
+    color: black;
+    padding: 40px;
+}
+
+#photos_link {
+    text-decoration: none;
+    font-size: 50px;
+    color: black;
+    padding: 40px;
+}
+#photos_header {
+    text-decoration: none;
+    font-size: 50px;
+    color: black;
+    padding: 40px;
+}
+
+#new_photo_link {
+    text-decoration: none;
+    font-size: 50px;
+    color: black;
+    padding: 40px;
+}
+
+#prev_photos_link {
     text-decoration: none;
     font-size: 50px;
     color: black;

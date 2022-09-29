@@ -1,3 +1,4 @@
+from controllers.photo_controller import photos
 from db.run_sql import run_sql
 
 from models.sight import Sight
@@ -10,12 +11,12 @@ import pdb
 
 # select_all
 def select_all():
-    blogs = []
+    photos = []
 
-    sql = "SELECT * FROM blogs"
+    sql = "SELECT * FROM photos"
     results = run_sql(sql)
 
-    for row in blogs:
-        blog = Blog(row['blog_name'], row['blog_content'], row['id'])
-        blogs.append(blog)
-    return blogs
+    for row in photos:
+        photo = Photo(row['photo_name'], row['photo_content'], row['id'])
+        photos.append(photos)
+    return photos

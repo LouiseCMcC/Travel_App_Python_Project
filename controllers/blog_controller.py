@@ -4,10 +4,12 @@ from flask import Blueprint
 from repositories import blog_repository, country_repository as country_repository
 from repositories import city_repository as city_repository
 from repositories import sight_repository as sight_repository
+from repositories import photo_repository as photo_repository
 
 from models.city import City
 from models.country import Country
 from models.sight import Sight
+from models.photo import Photo
 import pdb
 
 blogs_blueprint = Blueprint("blogs", __name__)

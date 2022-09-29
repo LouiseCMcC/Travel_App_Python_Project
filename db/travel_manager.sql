@@ -2,6 +2,13 @@ DROP TABLE IF EXISTS sights;
 DROP TABLE IF EXISTS cities;
 DROP TABLE IF EXISTS countries;
 DROP TABLE IF EXISTS blogs;
+DROP TABLE IF EXISTS photos;
+
+CREATE TABLE photos (
+    id SERIAL PRIMARY KEY,
+    photo_date INT,
+    photo_location VARCHAR (255)
+);
 
 CREATE TABLE blogs (
     id SERIAL PRIMARY KEY,

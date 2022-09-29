@@ -1,0 +1,14 @@
+<header id="photos_header">My Photos.</header>
+{% extends "base.html" %}
+{% block content %}
+<body>
+  <header>
+    <nav>
+      <ul class="photo_menu">
+        <li><a id="new_photo_link" href="/photos/new">New Photo</a></li>
+        <li><a id="prev_photos_link" href="/photos/archive">Previous Photos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+{% endblock %}
