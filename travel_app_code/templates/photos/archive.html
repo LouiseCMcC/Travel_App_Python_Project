@@ -9,7 +9,7 @@
         <div class="date">
             Photo Date: {{photo.blog_date}}
             <div class="my_photo">
-            {{photo.photo}}
+            <img src={{photo.photo}}/>
             
             <form class="delete-form" action="/photos/{{photo.id}}/delete" method="POST">
                 <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
