@@ -20,7 +20,7 @@ go to localhost:4999
 
 The Brief:
 
-Travel Bucket List
+Travel Bucket List -
 Build an app to track someone's travel adventures.
 
 MVP:
