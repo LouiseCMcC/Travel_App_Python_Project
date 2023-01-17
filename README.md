@@ -2,9 +2,11 @@
 Full Stack app for tracking, recording, and planning travel. Solo project using Python, Flask, HTML, CSS and SQL
 
 
-Technologies used: Postgres, Pythron 3.0, CSS, SQL, HTML 5.0
+Technologies used: 
 
-Brief
+Postgres, Pythron 3.0, CSS, SQL, HTML 5.0
+
+Project Brief:
 
 Travel Bucket List - Build an app to track someone's travel adventures.
 
